@@ -5,9 +5,9 @@ var game = {}
 game.murderer = '??'
 
 game['weapons'] = [
-	{ type: 'lasers' },
-	{ type: 'angry cats' },
-	{ type: 'dish soap' }
+	{ type: 'lasers', location: 'bedroom' },
+	{ type: 'angry cats', location: 'livingroom' },
+	{ type: 'dish soap', location: 'bathroom' }
 ]
 
 game.characters = []
@@ -15,5 +15,20 @@ game.characters = []
 game.characters[0] = 'Miss Scarlet'
 
 game.characters.push('Mr. Green')
+
+console.log(game)
+
+// Destructuring
+
+const newCharacter = { name: 'Rusty', room: 'kitchen', weapon: 'candlestick' }
+
+const {
+	name: newCharName,
+	room: newCharLocation,
+	weapon: newCharWeapon
+} = newCharacter
+
+game.characters.push(newCharName)
+game.weapons.push({ type: newCharWeapon, location: newCharLocation })
 
 console.log(game)
