@@ -16,7 +16,7 @@ game.characters[0] = 'Miss Scarlet'
 
 game.characters.push('Mr. Green')
 
-console.log(game)
+// console.log(game)
 
 // Destructuring
 
@@ -31,4 +31,25 @@ const {
 game.characters.push(newCharName)
 game.weapons.push({ type: newCharWeapon, location: newCharLocation })
 
-console.log(game)
+// console.log(game)
+
+// Looping exercise
+
+game.suspects = [
+	{
+		name: 'Rusty',
+		color: 'orange'
+	},
+	{
+		name: 'Miss Scarlet',
+		color: 'red'
+	}
+]
+
+function loopArr(arr) {
+	for (i = 0; i < arr.length; i++) {
+		console.log(arr[i])
+	}
+}
+
+loopArr(game.suspects)
